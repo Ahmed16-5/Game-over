@@ -1,8 +1,9 @@
 // import Details from "./../modules/details.module.js";
- export  default class UX {
+export default class UX {
   static showLoader() {
     document.getElementById("loader").style.display = "flex";
   }
+
   static hideLoader() {
     document.getElementById("loader").style.display = "none";
   }
@@ -24,7 +25,11 @@
                     <span class="badge text-bg-primary p-2">Free</span>
                   </div>
                   <p class="card-text small text-center opacity-50 text-white py-2">
-                     ${game.short_description.length > 100 ? game.short_description.slice(0, 100) + "..." : game.short_description}
+                     ${
+                       game.short_description.length > 100
+                         ? game.short_description.slice(0, 100) + "..."
+                         : game.short_description
+                     }
                   </p>
                 </div>
                 <footer
@@ -38,8 +43,8 @@
     }
   }
   static displayGameDetails(game) {
-  const container = document.querySelector(".details-section");
-  container.innerHTML = `<div class="container">
+    const container = document.querySelector(".details-section");
+    container.innerHTML = `<div class="container">
         <header class="hstack justify-content-between">
           <h1 class="text-center h3 py-4 text-white">Details Game</h1>
           <button class="btn-close btn-close-white"  id="btnClose"></button>
@@ -74,7 +79,6 @@
             >
           </div>
         </div>
-      </div>`
+      </div>`;
+  }
 }
-}
-

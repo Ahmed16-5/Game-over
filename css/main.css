@@ -119,6 +119,7 @@ h1 {
 .card {
   filter: grayscale(0.7);
   transition: transform 0.5s, filter 0.5s 0.1s;
+  cursor: pointer;
 }
 .card:hover {
   transform: scale(1.05);
